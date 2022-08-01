@@ -1,27 +1,21 @@
+import './DisplayPosts.css'
+
 
 const DisplayPosts = (props) => {
     return (
-        <table className='table'>
+        <table className='blog'>
+                       
             <thead>
-            <tr>
-                <th>Entry Number</th>
-                <th>Weight</th>
-                <th>Date</th>
-            </tr>
-            </thead>
-            <tbody>
-            {props.parentEntries.map((entry, index) => {
+            {props.parentEntries.map((entry) => {
                 return (
-                <tr key={index}>
-                    <td>{index + 1}</td>
-                    <td>{entry.weight}</td>
-                    <td>{entry.date}</td>
-
-
-                </tr>
+                <thead>
+                    <tr>{entry.date}</tr>
+                    <tr>{entry.name}</tr>
+                    <tr>{entry.comment}</tr>
+                </thead>
                 );
             })}
-            </tbody>
+            </thead>
       </table>   
       );
 }

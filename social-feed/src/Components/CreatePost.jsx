@@ -1,33 +1,40 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 
-// import './AddEntryForm.css';
+
+
 
 const CreatePost = (props) => {
 
-    const [weight, setWeight] = useState(0);
-    const [date, setDate] = useState('');
+    const [name, setName] = useState('');
+    const [comment, setComment] = useState('');
+    const [date, setDate] = useState('Date')
 
-    function handleSubmit(event) {
+    function handleSubmit(event){
         event.preventDefault();
-        let newEntry = {
-            weight: weight,
-            date: date 
+        
+        const newEntry = {
+            name: name,
+            comment: comment 
         };
-        console.log(newEntry);
+        props.addNewEntry(newEntry);
     }
 
 
     return ( 
-        <form onSubmit={handleSubmit} className='form-grid'>
-            <div className='form-group'>
-                <label>Weight</label>
-                <input type='number' className='form-control' value={weight} onChange={(event) => setWeight(parseFloat(event.target.value))} />
-            </div>
+        <form onSubmit={handleSubmit} className='form-control'>
             <div className='form-group'>
                 <label>Date</label>
-                <input type='date' className='form-control' value={date} onChange={(event) => setDate (event.target.value)} />
+                <input type='date' className='form-control' value={date} onChange={(event) => setDate(event.target.date)} />
             </div>
-            <button type='submit' className="btn btn-primary" style={{'margin-top': '1em'}}>Submit</button>
+            <div className='form-group'>
+                <label>Name</label>
+                <input type='text' className='form-control' value={name} onChange={(event) => setName(event.target.value)} />
+            </div>
+            <div className='form-group'>
+                <label>Comment</label>
+                <input type='text' className='form-control' value={comment} onChange={(event) => setComment (event.target.value)} />
+            </div>            
+            <button type='submit' className="btn btn-primary" style={{'margin-top': '1em'}}>Post</button>
 
 
         
