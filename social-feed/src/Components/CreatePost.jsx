@@ -3,6 +3,7 @@ import React, { useState} from 'react';
 
 
 
+
 const CreatePost = (props) => {
 
     const [name, setName] = useState('');
@@ -35,6 +36,8 @@ const CreatePost = (props) => {
                 <input type='text' className='form-control' value={comment} onChange={(event) => setComment (event.target.value)} />
             </div>            
             <button type='submit' className="btn btn-primary" style={{'margin-top': '1em'}}>Post</button>
+            
+
 
 
         

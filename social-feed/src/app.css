@@ -1,7 +1,7 @@
 .border-box {
-    border: 1px;
+    border: 3px;
     border-style: solid;
-    border-color: black;
-    margin: 3em;
-    padding: 1em;
+    border-color: rgb(21, 86, 227);
+    margin: 1em;
+    padding: 3em;
 }

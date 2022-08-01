@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 // import DisplayPosts from './Components/DisplayPosts';
 import CreatePost from './Components/CreatePost';
 import Post from './Components/Post';
-
 import './app.css';
+import LikeButton from './Components/LikeButton';
 
 function App() {
 
@@ -25,7 +25,11 @@ function App() {
           </div>
           <div className='border-box'>      
           <Post parentEntries={entries} />  
+            <div classname='LikeButton'>
+            <LikeButton parentEntries={entries} />
+            </div>
           </div>
+          
         </div>        
                           
       </div>
