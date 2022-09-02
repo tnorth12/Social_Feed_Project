@@ -1,0 +1,27 @@
+CreatePost.css
+#message{
+    text-align: left;
+    
+}
+.form-group{
+    max-width: 300px;
+    box-sizing: border-box;
+    border: yellow;
+    border-width: 3px;
+    padding-top: 2%;
+   
+    margin-left: 10px
+;
+}
+label{
+    font-weight: bolder;
+}
+.btn{
+    background-color:blue;
+    color: ivory;
+    margin-left: 37%;
+
+}
+#name{
+    text-transform: capitalize;
+}

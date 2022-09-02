@@ -1,23 +1,23 @@
-// import './DisplayPosts.css'
+import './DisplayPosts.css'
+import Post from './Post';
 
+const DisplayPosts = (props) => {
+  return (
+    <div>
+      {props.displayPosts.map((post, index) => {
+        return (
+          <Post postentry= {post}/>
+          // <div key={index}>
+          //   <div className="name">
+          //     <p id="name">{post.name + " says:"}</p>         //Using Post component instead
+          //   </div>
+          //   <p id="comment">{'"' + post.comment + '"'}</p>
+          //   <post />
+          // </div>
+        );                     //Only needed <Buttons /> added
+      })}
+    </div>
+  );
+};
 
-// const DisplayPosts = (props) => {
-//     return (
-//         <table className='blog'>
-                       
-//             <thead>
-//             {props.parentEntries.map((entry) => {
-//                 return (
-//                 <thead>
-//                     <tr>{entry.date}</tr>
-//                     <tr>{entry.name}</tr>
-//                     <tr>{entry.comment}</tr>
-//                 </thead>
-//                 );
-//             })}
-//             </thead>
-//       </table>   
-//       );
-// }
- 
-// export default DisplayPosts;
+export default DisplayPosts;

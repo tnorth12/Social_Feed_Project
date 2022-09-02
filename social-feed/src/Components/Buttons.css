@@ -1,0 +1,15 @@
+button{
+    background-color:ivory;
+    margin: auto;
+}
+#likeButton.active{
+    background-color: greenyellow;
+}
+#dislikeButton.active{
+    background-color: red;
+}
+.customButtons{
+    display: flex;
+    align-items: center;
+
+}
